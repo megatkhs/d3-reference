@@ -1,0 +1,90 @@
+@import url("../../node_modules/sanitize.css/sanitize.css");
+
+@font-face {
+  font-family: 'でじたる';
+  font-weight: normal;
+  src: local('UD デジタル 教科書体 N-R')
+}
+@font-face {
+  font-family: 'でじたる';
+  font-weight: bold;
+  src: local('UD デジタル 教科書体 N-B')
+}
+/* overwrite defaults in sanitize.css */
+html {
+    box-sizing: border-box;
+    font-family: 'でじたる', "Open Sans", sans-serif;
+    color: #333;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fefefe;
+  text-shadow: 0 2px 10px rgba(79, 20, 139, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+  .changedate {
+    margin-top: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+
+  h2 {
+    padding-left: 20px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #ddd;
+  }
+
+  p {
+    padding: 0 30px;
+    line-height: 1.8rem;
+
+    code {
+      display: block;
+      margin: 10px 0;
+      margin-left: 10px;
+      padding: 10px 20px;
+      border-left: solid 8px #f3f3f3;
+    }
+  }
+}
+
+a {
+  color: #00626f;
+
+  &[target="_blank"]:after {
+    content: "\f14c";
+    display: inline-block;
+    font-size: 0.6rem;
+    font-family: FontAwesome;
+  }
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
