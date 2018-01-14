@@ -1,14 +1,14 @@
-let gulp = require('gulp'),
-    pug = require('gulp-pug'),
-    sass = require('gulp-sass'),
-    changed = require('gulp-changed'),
-    connect = require('gulp-connect'),
-    plumber = require('gulp-plumber'),
-    notify = require('gulp-notify'),
-    browserSync = require('browser-sync'),
-    path = require('path');
+const gulp = require('gulp'),
+      pug = require('gulp-pug'),
+      sass = require('gulp-sass'),
+      changed = require('gulp-changed'),
+      connect = require('gulp-connect'),
+      plumber = require('gulp-plumber'),
+      notify = require('gulp-notify'),
+      browserSync = require('browser-sync'),
+      path = require('path');
 
-let src = {
+const src = {
   'root': './src',
   'pug': './src/pug/**/*.pug',
   'scss': './src/scss/**/*.scss'
@@ -50,7 +50,7 @@ gulp.task('change_scss', function(){
         errorHandler: notify.onError('Error: <%= error.message %>')
       }))
       .pipe(sass({
-        pretty: 'expanded'
+        outputStyle: 'expanded'
       }))
       .pipe(gulp.dest('./css'))
       .pipe(connect.reload());
@@ -63,7 +63,7 @@ gulp.task('all_build', function(){
       }))
       .pipe(pug({
         basedir: src.root,
-        pretty: true
+        outputStyle: true
       }))
       .pipe(gulp.dest('./'));
 
