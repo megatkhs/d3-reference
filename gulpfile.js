@@ -20,6 +20,7 @@ gulp.task('default', ['server_start', 'watch_files']);
 gulp.task('server_start', function(){
   connect.server({
     root: './',
+    port: 8081,
     livereload: true
   })
 });
